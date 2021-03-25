@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Loop 1 - Step 4</title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+   <link rel="stylesheet" href="css/styles.css">
+ </head>
+ <body>
+    <section class="chat">
+        <header class="chat-top">
+            <h4 class="username user-active">Mark Zuckerberg</h4>
+            <button class="chat-close-btn">
+                <img src="img/close.svg" alt="icon" width="24" height="24">
+            </button>
+        </header>
+        <div class="message-main">
+            <div class="messages-wrapper ">
+                <dive class="main-date">
+                    <time class="chat-top-time" datetime="2020-10-27T">Today</time>
+                </dive>
+                <div class="msg-wrapper msg-left">
+                    <time datetime="10:53">10:53</time>
+                    <p>Hi, Mark! I made a new design for Messenger App</p>
+                </div> 
+                <div class="msg-wrapper msg-right">
+                    <time datetime="10:57">10:57</time>
+                    <p>Yo! send it to my asssistant and we'll review it during the year</p>
+                </div> 
+                <div class="msg-wrapper msg-left">
+                    <time datetime="11:03">11:03</time>
+                    <p>But Mark</p>
+                </div> 
+                <div class="msg-wrapper msg-right notification">
+                    <p>You were blocked by the user</p>
+                </div>
+                <div class="msg-wrapper msg-right">
+                    <img src="https://picsum.photos/400/200" alt="picture" width="50" height="50">
+                </div>
+            </div>
+            <form class="form" action="#">
+                <input id="inputText" type="text" class="chat-input" placeholder="Enter your message">
+                <button id="btn" class="chat-btn" type="button">send</button>
+                <input id="inputPhotoURL" type="url" placeholder="Enter your photos">
+                <button id="btnPhoto" type="button">photo</button>
+            </form>
+        </div>
+    </section>
+    <script src="./js/main.js"></script>
+ </body>
+</html>

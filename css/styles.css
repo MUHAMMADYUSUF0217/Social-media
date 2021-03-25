@@ -1,0 +1,283 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	min-height: 100vw;
+	margin: 0;
+	padding: 0;
+	font-size: 15px;
+	font-family: "Roboto","Arial",sans-serif;
+	background-color: #97B3CC;
+	background-image: linear-gradient(to bottom,#D9E9F6,#8DA7BE);
+}
+
+.chat {
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+}
+
+.chat-top {
+	display: flex;
+	padding: 10px;
+	background-color: #6A96D8;
+	align-items: center;
+
+}
+
+.username {
+	display: flex;
+	align-items: center;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: auto;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: white;
+}
+
+.username::before {
+	content: "";
+	width: 7px;
+	height: 7px;
+	background-color: white;
+	margin-right: 10px;
+	border-radius: 50%;
+}
+
+.user-active::before {
+	background-color: lightgreen;
+}
+
+.chat-close-btn {
+	border: none;
+	padding: 7px;
+	background: none;
+}
+
+.chat-close-btn:focus {
+	outline: none;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.5);
+}
+
+.chat-close-btn:active {
+	opacity: 0.5;
+}
+
+.chat-close-btn img {
+	display: block;
+}
+
+.message-main {
+	padding: 25px;
+	background-color: white;
+	border-bottom: 0.8px solid #DDDDDD;
+}
+
+.messages-wrapper {
+	display: flex;
+	width: 390px;
+	height: 420px;
+	padding: 20px;
+	overflow-x: auto;
+	/*overflow: hidden;*/
+	flex-direction: column;
+	
+}
+
+.messages-wrapper time {
+	color: lightgrey;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.main-date {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.chat-top-time {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 13px;
+	color: #DDDDDD;
+}
+
+.chat-top-time::before,
+.chat-top-time::after {
+	display: inline-block;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #DDDDDD;
+}
+
+.chat-top-time::before {
+	margin-right: 5px;
+}
+
+.chat-top-time::after {
+	margin-left: 5px;
+}
+
+.msg-wrapper {
+	display: flex;
+	flex-direction: column;
+	max-width: 70%;
+	/*border: 1px solid red;*/
+	margin-bottom: 30px;
+}
+
+.msg-wrapper p {
+	display: inline-block;
+	border-radius: 3px;
+	padding: 10px;
+	margin-top: 2px;
+	position: relative;
+	border-top-left-radius: 0;
+}
+
+.msg-left p::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: -2.7px;
+	left: -15px;
+	border-width: 20px 15px 0px 0px;
+	transform: rotate(90deg);
+	border-style: solid;
+	border-color: #E6EDF6 transparent transparent transparent;
+}
+
+.msg-right p::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: -3px;
+	right: -8px;
+	border-width: 0px 9px 15px 0px;
+	transform: rotate(-90deg);
+	border-style: solid;
+	border-color: transparent #f2f2f2 transparent transparent;
+}
+
+
+.msg-left {
+	align-self: flex-start;
+	
+}
+
+.msg-right {
+	align-self: flex-end;
+}
+
+.msg-right time {
+	align-self: flex-end;
+}
+
+.msg-left time {
+	align-self: flex-start;
+}
+
+.msg-left p {
+	background-color: #E6EDF6;
+	margin-left: 15px;
+}
+
+.msg-right p {
+	background-color: #f2f2f2;
+}
+
+.msg-right img {
+	margin-right: 15px;
+	width: 220px;
+	height: 150px;
+	object-fit: cover;
+}
+.notification p {
+	background-color: #ffc2c1;
+	
+}
+
+.notification p::after {
+	position: absolute;
+	top: -3px;
+	right: -8px;
+	border-width: 0px 9px 15px 0px;
+	transform: rotate(-90deg);
+	border-style: solid;
+	border-color: transparent #ffc2c1 transparent transparent;
+}
+
+.form {
+	/*border: 1px solid red;*/
+	margin-top: 15px;
+}
+
+.chat-input {
+	width: 80%;
+	height: 30px;
+	border: none;
+}
+
+.chat-input:focus {
+	outline: none;
+	box-shadow: 0px 1px 0px -1px black;
+}
+
+.chat-btn {
+	padding: 10px 15px;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;
+	color: lightblue;
+	background:none;
+	border: none;
+}
+
+.chat-btn:focus {
+	outline: none;
+}
+
+.chat-btn:active {
+	box-shadow: 0px 0px 0px 1px black;
+}
+
+
+#inputPhotoURL{
+	width: 320px;
+	border: none;
+	/*height: 300px;*/
+}
+
+#btnPhoto {
+	padding: 10px 10px;
+	font-weight: bold;
+	font-size: 15px;
+	text-transform: uppercase;    
+	color: lightblue;
+	background:none;
+	border: none;
+}
+
+#btnPhoto:focus {
+	outline: none;
+}
+
+#btnPhoto:active {
+	box-shadow: 0px 0px 0px 1px black;
+
+}
